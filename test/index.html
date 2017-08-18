@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Demo</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/d3/d3.min.js"></script>
+    <script src="lib/d3.layout.cloud.js"></script>
+    <script src="lib/echarts.js"></script>
+    <script src="lib/echarts-wordcloud.min.js"></script>
+    <script src="lib/papaparse.min.js"></script>
+    <script src="lib/LinqToJavascript.js"></script>
+    <script src="lib/wordcloud2.js"></script>
+    <script src="lib/js2wordcloud.js"></script>
+
+    <!-- myjs -->
+    <script src="config.js"></script>
+    <script src="util.js"></script>
+    <script src="graph.js"></script>
+    <script src="equipment.js"></script>
+    <script src="wordcloud1.js"></script>
+    <script src="wordcloud2.js"></script>
+    <script src="wordcloud3.js"></script>
+    <script src="tagpie.js"></script>
+    <script src="tagrect.js"></script>
+    <script src="tagline.js"></script>
+    <script src="radar.js"></script>
+    <script src="map.js"></script>
+</head>
+
+<body style="margin-left:120px;">
+    <div id="chart1" style="width:800px;height:600px;"></div>
+    <div id="chart2" style="width:800px;height:600px;"></div>
+    <!-- <div id="wordcloud1" style="width:800px;height:600px;"></div>    -->
+    <!-- <canvas id="wordcloud2" width="900" height="900">your browser is not soupport canvas!</canvas> -->
+    <div id="wordcloud3" style="width:600px;height: 400px;"></div>
+    <div id="tagpie" style="width:800px;height:600px;"></div>
+    <div id="tagrect" style="width:800px;height:600px;"></div>
+    <div id="tagline" style="width:800px;height:600px;"></div>
+    <div id="radar_xw" style="width:800px;height:600px;"></div>
+    <div id="radar_qj" style="width:800px;height:600px;"></div>
+    <div id="radar_gz" style="width:800px;height:600px;"></div>
+    <div id="map" style="width:800px;height:600px;"></div>
+
+    <script type="text/javascript">
+    new GraphAnalysis('chart1', '启动困难');
+    new EquipmentAnalysis('chart2', '6110型');
+    // new WordCloud1('data/全部标签统计.csv', 'wordcloud1');
+    // new WordCloud2('data/全部标签统计.csv', 'wordcloud2');
+    new WordCloud3('data/行为原因标签统计.csv', 'wordcloud3');
+    new TagPie('data/全部标签统计.csv', 'tagpie');
+    new TagRect('data/全部标签统计.csv', 'tagrect');
+    new TagLine('data/TOP5折线图 - 日期.csv', 'tagline', '全部');
+    new RadarGraph('data/装备雷达-总.csv', ['radar_xw', 'radar_qj', 'radar_gz'], 'EQ1090型汽车');
+    new MapGraph('data/装备故障地点-经纬度.csv', 'map', '汉阳HY4320S半挂牵引车');
+    </script>
+</body>
+
+</html>
