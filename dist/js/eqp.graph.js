@@ -106,7 +106,7 @@ class EqpGraph {
                     type: 'radar',
                     data: [{
                         value: countData,
-                        name: '行为'
+                        name: titleText
                     }]
                 }]
             };
@@ -385,7 +385,7 @@ class EqpGraph {
             },
             tooltip: {
                 trigger: 'item',
-                formatter: '{a} : {b}'
+                formatter: '{b}'
             },
             toolbox: {
                 show: true,

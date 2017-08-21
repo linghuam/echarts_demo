@@ -157,7 +157,7 @@ class TagSingleGraph {
             },
             tooltip: {
                 trigger: 'item',
-                formatter: '{a} : {b}'
+                formatter: '{b}'
             },
             toolbox: {
                 show: true,
