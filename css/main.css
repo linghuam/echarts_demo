@@ -23,6 +23,7 @@
 
 td {
 	cursor:pointer !important;
+    text-align:center;
 }
 
 .module-container {
