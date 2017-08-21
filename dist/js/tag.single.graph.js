@@ -9,7 +9,7 @@ class TagSingleGraph {
 
         this._selectTagName = null;
         this._categories = [
-            { name: "行为" },
+            { name: "操作" },
             { name: "器件" },
             { name: "故障" }
         ];

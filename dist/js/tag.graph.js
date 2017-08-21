@@ -48,7 +48,7 @@ class TagGraph {
     }
     var option = {
       title: {
-        text: '词云',
+        text: '',//'词云',
         left: 'left'
       },
       tooltip: {
@@ -70,16 +70,16 @@ class TagGraph {
     var titleText = '';
     if(type === 'all') {
       origdata = this._allData;
-      titleText = '全部';
+      titleText = '';
     } else if(type === 'gz') {
       origdata = this._gzData;
-      titleText = '故障现象';
+      titleText = '故障现象分布';
     } else if(type === 'qj') {
       origdata = this._qjData;
-      titleText = '器件质量问题';
+      titleText = '器件质量问题分布';
     } else if(type === 'xw') {
       origdata = this._xwData;
-      titleText = '操作使用不当';
+      titleText = '操作使用原因分布';
     }
     if(!origdata) return;
 
@@ -96,7 +96,7 @@ class TagGraph {
 
     var option = {
       title: {
-        text: titleText + '分布',
+        text: titleText,
         left: 'left'
       },
       tooltip: {
@@ -128,16 +128,16 @@ class TagGraph {
     var titleText = '';
     if(type === 'all') {
       origdata = this._allData;
-      titleText = '全部';
+      titleText = '';
     } else if(type === 'gz') {
       origdata = this._gzData;
-      titleText = '故障现象';
+      titleText = '故障现象统计';
     } else if(type === 'qj') {
       origdata = this._qjData;
-      titleText = '器件质量问题';
+      titleText = '器件质量问题统计';
     } else if(type === 'xw') {
       origdata = this._xwData;
-      titleText = '操作使用不当';
+      titleText = '操作使用原因统计';
     }
     if(!origdata) return;
     var x = [],
@@ -153,7 +153,7 @@ class TagGraph {
 
     var option = {
       title: {
-        text: titleText + '统计',
+        text: titleText,
         left: 'left'
       },
       color: ['#3398DB'],
@@ -206,13 +206,13 @@ class TagGraph {
   updateLine(type, elementId) {
     var titleText = '';
     if(type === 'all') {
-      titleText = '全部';
+      titleText = '';
     } else if(type === 'gz') {
-      titleText = '故障现象';
+      titleText = '故障现象Top5走势';
     } else if(type === 'qj') {
-      titleText = '器件质量问题';
+      titleText = '器件质量问题Top5走势';
     } else if(type === 'xw') {
-      titleText = '操作使用不当';
+      titleText = '操作使用原因Top5走势';
     }    
     var lineType = this.categories[type];
     var filterData = this._lineData.where(o => o.line_type === lineType);
@@ -230,7 +230,7 @@ class TagGraph {
 
     var option = {
       title: {
-        text: "Top5" + titleText + "走势",
+        text: titleText,
         left: 'left'
       },
       tooltip: {

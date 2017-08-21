@@ -13,7 +13,7 @@ class EqpGraph {
         this._chinajson = null;
 
         this._categories = [
-            { name: "行为" },
+            { name: "操作" },
             { name: "器件" },
             { name: "故障" },
             { name: "装备" }
@@ -76,7 +76,7 @@ class EqpGraph {
         var myecharts = echarts.init(document.getElementById(elementId));
         if(category === this.categories.xw) {
             var { categoryData, countData } = this._getRadarOptData(this._xwData);
-            titleText = '操作使用不当';
+            titleText = '操作使用原因';
         } else if(category === this.categories.qj) {
             var { categoryData, countData } = this._getRadarOptData(this._qjData);
              titleText = '器件质量问题';
