@@ -291,7 +291,7 @@ class EqpGraph {
         }.bind(this));
         var nodes = this.getNodes(startTime, endTime, equipmentName);
         var links = this.getLinks(startTime, endTime, equipmentName);
-        var options = this.getChartOptions(this._categories, nodes, links);
+        var options = this.getChartOptions(this._categories, nodes, links, equipmentName);
         myecharts.setOption(options);
 
     }
@@ -378,10 +378,11 @@ class EqpGraph {
         return links;
     }
 
-    getChartOptions(categories, nodes, links) {
+    getChartOptions(categories, nodes, links, equipmentName) {
         var options = {
             title: {
-                text: '装备'
+                text: equipmentName,
+                left:'left'
             },
             tooltip: {
                 trigger: 'item',
