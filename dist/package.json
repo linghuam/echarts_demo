@@ -1,0 +1,14 @@
+{
+  "name": "dist",
+  "version": "1.0.0",
+  "description": "使用 Bootstrap + Echarts + ES6 + Paparse + linqToJavascript 快速搭建的\r 一个数据分析展示demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
