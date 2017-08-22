@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Demo</title>
+    <title></title>
     <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="lib/bootstraptable/bootstrap-table.min.css">
     <link rel="stylesheet" type="text/css" href="lib/bootstrapdatepicker/bootstrap-datetimepicker.min.css">
@@ -30,30 +30,20 @@
     <script src="lib/js2wordcloud.js"></script>
 
     <!-- myjs -->
-    <script src="js/proj.config.js"></script>
-    <script src="js/proj.util.js"></script>
-    <script src="js/popover.js"></script>
-    <script src="js/tag.graph.js"></script>
-    <script src="js/tag.single.js"></script>
-    <script src="js/tag.single.graph.js"></script>
-    <script src="js/tag.layout.js"></script>
-    <script src="js/eqp.graph.js"></script>
-    <script src="js/eqp.layout.js"></script>
+    <script src="es5js/proj.config.js"></script>
+    <script src="es5js/proj.util.js"></script>
+    <script src="es5js/popover.js"></script>
+    <script src="es5js/tag.graph.js"></script>
+    <script src="es5js/tag.single.js"></script>
+    <script src="es5js/tag.single.graph.js"></script>
+    <script src="es5js/tag.layout.js"></script>
+    <script src="es5js/eqp.graph.js"></script>
+    <script src="es5js/eqp.layout.js"></script>
 
 </head>
 
 <body>
-    <!-- <a href="https://github.com/linghuam/echarts_demo"><img style="position: absolute; top: 0; right: 0; border: 0;z-index: 99999;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a> -->
     <div class="container-fluid">
-
-<!--         <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Demo 演示系统</a>
-                </div>
-            </div>
-        </nav> -->
-
         <nav class="navbar">
                 <ul class="nav nav-pills">
                     <li role="presentation" id="tag_analysis" class="active"><a href="#">装备故障统计</a></li>
@@ -63,15 +53,6 @@
         </nav>
 
         <div class="row container-fluid">
-
-<!--             <div class="col-md-1 container-left">
-                <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation" id="tag_analysis" class="active"><a href="#">标签统计分析</a></li>
-                    <li role="presentation" id="equipment_analysis"><a href="#">装备故障分析</a></li>
-                    <li role="presentation" id="article_analysis"><a href="#">文章分析</a></li>
-                </ul>
-            </div> -->
-
             <div class="col-md-12 container-right">
                 <div id="loading">loading data ...</div>
                 <div class="container-fluid module-container tag_container">
@@ -195,7 +176,7 @@
             </div>
         </div>
     </div>
-    <script src="js/index.js" type="text/javascript"></script>
+    <script src="es5js/index.js" type="text/javascript"></script>
 </body>
 
 </html>
