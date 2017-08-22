@@ -110,3 +110,5 @@ Util.getCusUnixDate = function (sjstr) {
   var d = new Date(year, month, day, hour, minutes, seconds);
   return d
 }
+
+export {Util}

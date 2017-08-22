@@ -1,4 +1,4 @@
-class Dialog {
+export class Dialog {
 
     constructor() {
         this._container = $('<div></div>');

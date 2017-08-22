@@ -1,4 +1,6 @@
-class TagLayout {
+import {TagGraph} from './tag.graph.js'
+import {TagSingle} from './tag.single.js'
+export class TagLayout {
 
   constructor(containerClass) {
     this._contanier = $('.' + containerClass);

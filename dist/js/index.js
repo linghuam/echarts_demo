@@ -1,3 +1,8 @@
+require("babel-core/register");
+require("babel-polyfill");
+import {Dialog} from './popover.js'
+import {TagLayout} from './tag.layout.js'
+import {EquipMentLayout} from './eqp.layout.js'
 
 $(function () {
     window.dialogPopover = new Dialog();

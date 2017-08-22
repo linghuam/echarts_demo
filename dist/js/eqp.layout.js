@@ -1,4 +1,6 @@
-class EquipMentLayout {
+import {Util} from './proj.util.js'
+import {EqpGraph} from './eqp.graph.js'
+export class EquipMentLayout {
 
     constructor(containerClass) {
         this._contanier = $('.' + containerClass);

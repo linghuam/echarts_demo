@@ -1,4 +1,7 @@
-class TagSingle {
+import {TagSingleGraph} from './tag.single.graph.js'
+import {Util} from './proj.util.js'
+
+export class TagSingle {
 
     constructor(containerClass) {
         this._contanier = $('.' + containerClass);

@@ -1,4 +1,7 @@
-class EqpGraph {
+import {Config} from './proj.config.js'
+import {Util} from './proj.util.js'
+
+export class EqpGraph {
 
     constructor() {
 

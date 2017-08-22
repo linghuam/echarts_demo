@@ -1,4 +1,5 @@
-class TagGraph {
+import {Util} from './proj.util.js'
+export class TagGraph {
 
   constructor() {
 
