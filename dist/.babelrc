@@ -2,5 +2,8 @@
     "presets": [
       "es2015"
     ],
-    "plugins": []
+    "plugins": [    ["transform-async-to-module-method", {
+      "module": "bluebird",
+      "method": "coroutine"
+    }]]
   }

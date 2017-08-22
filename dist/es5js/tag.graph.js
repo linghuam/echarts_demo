@@ -1,5 +1,7 @@
 'use strict';
 
+var _bluebird = require('bluebird');
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23,13 +25,52 @@ var TagGraph = function () {
 
   _createClass(TagGraph, [{
     key: 'getData',
-    value: async function getData() {
-      this._allData = await Util.readFile('data/全部标签统计.csv');
-      this._gzData = await Util.readFile('data/故障原因标签统计.csv');
-      this._qjData = await Util.readFile('data/器件原因标签统计.csv');
-      this._xwData = await Util.readFile('data/行为原因标签统计.csv');
-      this._lineData = await Util.readFile('data/TOP5折线图 - 日期.csv');
-    }
+    value: function () {
+      var _ref = (0, _bluebird.coroutine)( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+        return regeneratorRuntime.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return Util.readFile('data/全部标签统计.csv');
+
+              case 2:
+                this._allData = _context.sent;
+                _context.next = 5;
+                return Util.readFile('data/故障原因标签统计.csv');
+
+              case 5:
+                this._gzData = _context.sent;
+                _context.next = 8;
+                return Util.readFile('data/器件原因标签统计.csv');
+
+              case 8:
+                this._qjData = _context.sent;
+                _context.next = 11;
+                return Util.readFile('data/行为原因标签统计.csv');
+
+              case 11:
+                this._xwData = _context.sent;
+                _context.next = 14;
+                return Util.readFile('data/TOP5折线图 - 日期.csv');
+
+              case 14:
+                this._lineData = _context.sent;
+
+              case 15:
+              case 'end':
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      function getData() {
+        return _ref.apply(this, arguments);
+      }
+
+      return getData;
+    }()
   }, {
     key: 'loadData',
     value: function loadData() {

@@ -1,5 +1,7 @@
 "use strict";
 
+var _bluebird = require("bluebird");
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -25,13 +27,52 @@ var TagSingleGraph = function () {
 
     _createClass(TagSingleGraph, [{
         key: "getData",
-        value: async function getData() {
-            this._nodesData = await Util.readFile('data/标签关联点-时间戳.csv');
-            this._linkData = await Util.readFile('data/标签关联边-时间戳-无向.csv');
-            this._tagDocData = await Util.readFile('data/标签关联文章列表.csv');
-            this._docData = await Util.readFile('data/文章列表.csv');
-            this._timeData = await Util.readFile('data/标签关联最大值最小值-时间戳.csv');
-        }
+        value: function () {
+            var _ref = (0, _bluebird.coroutine)( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+                return regeneratorRuntime.wrap(function _callee$(_context) {
+                    while (1) {
+                        switch (_context.prev = _context.next) {
+                            case 0:
+                                _context.next = 2;
+                                return Util.readFile('data/标签关联点-时间戳.csv');
+
+                            case 2:
+                                this._nodesData = _context.sent;
+                                _context.next = 5;
+                                return Util.readFile('data/标签关联边-时间戳-无向.csv');
+
+                            case 5:
+                                this._linkData = _context.sent;
+                                _context.next = 8;
+                                return Util.readFile('data/标签关联文章列表.csv');
+
+                            case 8:
+                                this._tagDocData = _context.sent;
+                                _context.next = 11;
+                                return Util.readFile('data/文章列表.csv');
+
+                            case 11:
+                                this._docData = _context.sent;
+                                _context.next = 14;
+                                return Util.readFile('data/标签关联最大值最小值-时间戳.csv');
+
+                            case 14:
+                                this._timeData = _context.sent;
+
+                            case 15:
+                            case "end":
+                                return _context.stop();
+                        }
+                    }
+                }, _callee, this);
+            }));
+
+            function getData() {
+                return _ref.apply(this, arguments);
+            }
+
+            return getData;
+        }()
     }, {
         key: "loadData",
         value: function loadData(callback, selectTagName) {
