@@ -167,7 +167,7 @@ class TagSingle {
 
     getDocContent(data) {
         var html = [];
-        html.push('<table>');
+        html.push('<table style="width:100%;">');
         for(let i = 0, len = data.length; i < len; i++) {
             html.push('<tr>');
             html.push('<td width="20%">标题</td>');
