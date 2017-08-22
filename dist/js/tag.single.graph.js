@@ -50,7 +50,8 @@ class TagSingleGraph {
     }
 
     getTableData() {
-        return this._docData;
+        var tagdoc = this._tagDocData.where(o => o.tag_name === this._selectTagName)
+        return tagdoc;
     }
 
     getDocsByids(ids) {

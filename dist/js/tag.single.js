@@ -114,7 +114,7 @@ class TagSingle {
             $('#' + tableId).bootstrapTable('destroy');
             $('#' + tableId).bootstrapTable({
                 columns: [{
-                    field: 'id',
+                    field: 'doc_id',
                     title: '序号'
                 }, {
                     field: 'title',
@@ -124,7 +124,7 @@ class TagSingle {
                     title: '时间'
                 }],
                 onClickRow: function (row, $element, field) {
-                    var docdata = self._singleGraph.getDocDetailById(row.id);
+                    var docdata = self._singleGraph.getDocDetailById(row.doc_id);
                     window.dialogPopover.alert('文章详情', self.getDocContent(docdata));
                 },
                 data: data,
